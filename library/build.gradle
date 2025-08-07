@@ -6,10 +6,10 @@ android {
     compileSdkVersion 33
     
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 33
         versionCode 1
-        versionName "1.0.2"
+        versionName "1.0.3"
     }
     
     // 避免配置时间属性访问问题
@@ -27,10 +27,10 @@ publishing {
         aar(MavenPublication) {
             groupId = 'com.github.iboxsandroid'
             artifactId = 'uniappV8'
-            version = '1.0.2'
+            version = '1.0.3'
             
             // 指定AAR文件路径
-            artifact("$projectDir/src/main/aar/uniapp-v8-release")
+            artifact("$projectDir/src/main/aar/uniapp-v8-release.aar")
             
             // 添加POM元数据
             pom {
