@@ -9,7 +9,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 33
         versionCode 1
-        versionName "1.0.3"
+        versionName "4.75"
     }
     
     // 避免配置时间属性访问问题
@@ -27,7 +27,7 @@ publishing {
         aar(MavenPublication) {
             groupId = 'com.github.iboxsandroid'
             artifactId = 'uniappV8'
-            version = '1.0.3'
+            version = '4.75'
             
             // 指定AAR文件路径
             artifact("$projectDir/src/main/aar/uniapp-v8-release.aar")
