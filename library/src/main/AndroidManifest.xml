@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taobao.weex" >
+    <uses-sdk android:minSdkVersion="19"/>
+    <application android:extractNativeLibs="true">
+        <receiver android:name="com.taobao.weex.WXGlobalEventReceiver" android:enabled="true" android:exported="false"> </receiver>
+    </application>
+</manifest>

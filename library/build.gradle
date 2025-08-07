@@ -1,0 +1,64 @@
+// library/build.gradle
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion 33
+    
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0.2"
+    }
+    
+    // 避免配置时间属性访问问题
+    testOptions {
+        unitTests.all {
+            // 禁用测试以加快构建
+            enabled = false
+        }
+    }
+}
+
+// 配置Maven发布
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId = 'com.github.iboxsandroid'
+            artifactId = 'uniappV8'
+            version = '1.0.2'
+            
+            // 指定AAR文件路径
+            artifact("$projectDir/src/main/aar/uniapp-v8-release")
+            
+            // 添加POM元数据
+            pom {
+                name = 'uniappV8'
+                description = 'uniappV8'
+                url = 'https://github.com/iboxsandroid/uniappV8'
+                
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                
+                developers {
+                    developer {
+                        id = 'iboxsandroid'
+                        name = 'iboxsandroid'
+                        email = 'your@example.com'
+                    }
+                }
+                
+                scm {
+                    connection = 'scm:git:git://github.com/iboxsandroid/uniappV8.git'
+                    developerConnection = 'scm:git:ssh://github.com/iboxsandroid/uniappV8.git'
+                    url = 'https://github.com/iboxsandroid/uniappV8'
+                }
+            }
+        }
+    }
+}
