@@ -1,16 +1,17 @@
 buildscript {
     repositories {
-        google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.vanniktech:gradle-maven-publish-plugin:0.33.0'
     }
 }
 
+group = 'io.github.itlattice'
+version = '4.85'
+
 allprojects {
     repositories {
-        google()
         mavenCentral()
     }
 }
