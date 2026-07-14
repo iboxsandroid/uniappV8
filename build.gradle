@@ -8,7 +8,7 @@ buildscript {
 }
 
 group = 'io.github.itlattice'
-version = '4.85'
+version = '5.14'
 
 allprojects {
     repositories {
